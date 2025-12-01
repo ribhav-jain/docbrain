@@ -1,10 +1,10 @@
 {
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist/public" }
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/public",
+  "env": {
+    "VITE_API_URL": {
+      "description": "Backend API URL (Replit app URL)",
+      "required": true
     }
-  ],
-  "routes": [{ "src": "/(.*)", "dest": "/index.html" }]
+  }
 }
